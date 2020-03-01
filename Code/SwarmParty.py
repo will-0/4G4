@@ -2,6 +2,7 @@ import numpy as np
 import pylab as plt
 
 class NN_Swarm():
+    
     def __init__(self, n_particles = 30, x_max = 1, v_max = 0.1, c_1 = 2, c_2 = 2):
         self.n_particles = n_particles
         self.x_min = -1*x_max
@@ -30,12 +31,18 @@ class NN_Swarm():
         self.X_test = X_test
         self.Y_train = Y_train
         self.Y_test = Y_test
+        print(self.current_pos.shape)
+        try:
+            float(self.model.evaluate(self.X_test, self.Y_test, verbose=0))
+        except TypeError as error:
+            print("Model.evaluate is returning multiple values.\nThis is likely because you have asked the model to return additional metrics.\nPlease remove the \'metrics=\' part of model.compile")
+            raise(error)
         self.g_best = self.p_best[np.argmin(self.f(self.current_pos)),:]
         self.pbest_perform = self.f(self.p_best)
         self.gbest_perform = self.f(self.g_best)
         self.nn_weights = self._ConvertBack(self.g_best)      
 
-    def train(self, iterations = 50, give_curve = False, train_fast = False):
+    def train(self, iterations = 30, give_curve = False, train_fast = False):
         """ Function to initiate swarm optimization of the weights and biases for the keras
         model provided. Runs for 50 iterations by default. Set give_curve = True to directly
         return a training curve (a numpy array with performance evaluations on training and 
