@@ -51,7 +51,7 @@ from SwarmParty import NN_Swarm
 
 # Set seed for reproducible results
 np.random.seed(1)
-tf.random.set_seed(1)
+tf.compat.v1.set_random_seed(1)
 
 
 def get_data():
