@@ -1,0 +1,26 @@
+{
+    "root": "/Users/kim-barker/OneDrive - University of Cambridge/Part IIB/4G4 Coursework/4G4",
+    "program": "/usr/local/bin/wandb",
+    "git": {
+        "remote": "https://github.com/will-0/4G4.git",
+        "commit": "7434fdc0661af2bd879db199c56c7e0e42135479"
+    },
+    "email": null,
+    "startedAt": "2020-04-14T10:38:07.442877",
+    "host": "Kims-MacBook-Pro.local",
+    "username": "kim-barker",
+    "executable": "/usr/local/opt/python/bin/python3.7",
+    "os": "Darwin-19.3.0-x86_64-i386-64bit",
+    "python": "3.7.4",
+    "cpu_count": 8,
+    "args": [
+        "agent",
+        "z0g1twpu"
+    ],
+    "state": "finished",
+    "jobType": null,
+    "mode": "run",
+    "project": "4g4-kim-test",
+    "heartbeatAt": "2020-04-14T10:41:49.331395",
+    "exitcode": 0
+}

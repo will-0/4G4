@@ -1,0 +1,58 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.31
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+c_1:
+  desc: null
+  value: 1.8542048578261794
+c_2:
+  desc: null
+  value: 2.2226882459409767
+epochs:
+  desc: null
+  value: 194
+learning_rate:
+  desc: null
+  value: 0.0013418145226356483
+num_hidden_layers:
+  desc: null
+  value: 2
+num_particles:
+  desc: null
+  value: 28
+num_per_layer:
+  desc: null
+  value: 18
+v_max:
+  desc: null
+  value: 0.14204293666107
+
+Using TensorFlow backend.
+2020-04-14 12:15:53.834093: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-04-14 12:15:53.851894: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fbc534b6620 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-14 12:15:53.851912: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                (None, 18)                90        
+_________________________________________________________________
+dense_1 (Dense)              (None, 18)                342       
+_________________________________________________________________
+dense_2 (Dense)              (None, 18)                342       
+_________________________________________________________________
+dense_3 (Dense)              (None, 3)                 57        
+=================================================================
+Total params: 831
+Trainable params: 831
+Non-trainable params: 0
+_________________________________________________________________
+[34m[1mwandb[0m: [33mWARNING[0m Ignoring project='4g4-kim-test-1' passed to wandb.init when running a sweep
+Here
+(28, 831)
+Performance at iteration 1: [[5.40613617]]Performance at iteration 2: [[5.40613617]]Performance at iteration 3: [[5.40613617]]Performance at iteration 4: [[5.40613617]]Performance at iteration 5: 5.267312399546305Performance at iteration 6: 4.766278129153782Performance at iteration 7: 4.309627649519179Performance at iteration 8: 3.8918563736809624Performance at iteration 9: 3.513128916422526Performance at iteration 10: 3.171913152270847Performance at iteration 11: 2.866576067606608Performance at iteration 12: 2.5922559261322022Performance at iteration 13: 2.347745026482476Performance at iteration 14: 2.1303977860344783Performance at iteration 15: 1.9356250683466594Performance at iteration 16: 1.7613415665096708Performance at iteration 17: 1.6068999926249186Performance at iteration 18: 1.4707675404018825Performance at iteration 19: 1.3536069340176053Performance at iteration 20: 1.2551155037350126Performance at iteration 21: 1.1735994815826416Performance at iteration 22: 1.1069094816843668Performance at iteration 23: 1.0527641773223877Performance at iteration 24: 1.0100685954093933Performance at iteration 25: 0.9778846343358357Performance at iteration 26: 0.9546272966596815Performance at iteration 27: 0.9401444329155816Performance at iteration 28: 0.9327559139993455Performance at iteration 29: 0.9327559139993455Performance at iteration 30: 0.9327559139993455Performance at iteration 31: 0.9321978661749099Performance at iteration 32: 0.9321978661749099Performance at iteration 33: 0.9321978661749099Performance at iteration 34: 0.9321978661749099Performance at iteration 35: 0.9321978661749099Performance at iteration 36: 0.9321978661749099Performance at iteration 37: 0.9321978661749099Performance at iteration 38: 0.8971059600512187Performance at iteration 39: 0.8582254264089796Performance at iteration 40: 0.8259903324974908Performance at iteration 41: 0.8000918957922194Performance at iteration 42: 0.7740216732025147Performance at iteration 43: 0.7449631187650892Performance at iteration 44: 0.7201527304119534Performance at iteration 45: 0.6984533018536038Performance at iteration 46: 0.6796519345707364Performance at iteration 47: 0.6634523789087932Performance at iteration 48: 0.6504604935646057Performance at iteration 49: 0.6393407199117872Performance at iteration 50: 0.6306820578045316Performance at iteration 51: 0.6239921079741584Performance at iteration 52: 0.6182886507776049Performance at iteration 53: 0.6142192310757107Performance at iteration 54: 0.6123746169937981Performance at iteration 55: 0.6123746169937981Performance at iteration 56: 0.6123746169937981Performance at iteration 57: 0.5997503956158956Performance at iteration 58: 0.5690216766463385Performance at iteration 59: 0.5369878305329217Performance at iteration 60: 0.5053682327270508Performance at iteration 61: 0.47776916490660776Performance at iteration 62: 0.45369587275716994Performance at iteration 63: 0.4330355293220944Performance at iteration 64: 0.415504433049096Performance at iteration 65: 0.4011108504401313Performance at iteration 66: 0.38932499488194783Performance at iteration 67: 0.38000687824355234Performance at iteration 68: 0.3726500511169434Performance at iteration 69: 0.3670262787077162Performance at iteration 70: 0.3629230605231391Performance at iteration 71: 0.35222978790601095Performance at iteration 72: 0.33070059882269964Performance at iteration 73: 0.3171881437301636Performance at iteration 74: 0.3099082522922092Performance at iteration 75: 0.30791710482703316Performance at iteration 76: 0.30791710482703316Performance at iteration 77: 0.3019540184073978Performance at iteration 78: 0.29363357954555086Performance at iteration 79: 0.28673753605948554Performance at iteration 80: 0.2810020473268297Performance at iteration 81: 0.2763090696599748Performance at iteration 82: 0.27264690332942537Performance at iteration 83: 0.2697918613751729Performance at iteration 84: 0.26768376297420926Performance at iteration 85: 0.26644596656163533Performance at iteration 86: 0.2658033013343811Performance at iteration 87: 0.2651841872268253Performance at iteration 88: 0.2651841872268253Performance at iteration 89: 0.2651841872268253Performance at iteration 90: 0.2651841872268253Performance at iteration 91: 0.2651619891325633Performance at iteration 92: 0.2651619891325633Performance at iteration 93: 0.2651619891325633Performance at iteration 94: 0.2651619891325633Performance at iteration 95: 0.2651575313674079Performance at iteration 96: 0.2651575313674079Performance at iteration 97: 0.2651575313674079Performance at iteration 98: 0.2651575313674079Performance at iteration 99: 0.264055237505171Performance at iteration 100: 0.2572759081919988Performance at iteration 101: 0.25238255063692727Performance at iteration 102: 0.24843837751282585Performance at iteration 103: 0.24600368671947057Performance at iteration 104: 0.24468131727642484Performance at iteration 105: 0.24224263363414342Performance at iteration 106: 0.2375558598173989Performance at iteration 107: 0.23195435934596592Performance at iteration 108: 0.2269704196188185Performance at iteration 109: 0.2225957774453693Performance at iteration 110: 0.21958834297127194Performance at iteration 111: 0.21767582727803125Performance at iteration 112: 0.21638421151373122Performance at iteration 113: 0.21568893326653374Performance at iteration 114: 0.21464521951145596Performance at iteration 115: 0.2135255475838979Performance at iteration 116: 0.21261632740497588Performance at iteration 117: 0.21063367989328172Performance at iteration 118: 0.20899774067931706Performance at iteration 119: 0.20769631266593933Performance at iteration 120: 0.20656817389859095Performance at iteration 121: 0.20598672231038412Performance at iteration 122: 0.2058497471941842Performance at iteration 123: 0.2050451030333837Performance at iteration 124: 0.20332351293828752Performance at iteration 125: 0.20114935239156087Performance at iteration 126: 0.1982285648584366Performance at iteration 127: 0.19606087505817413Performance at iteration 128: 0.19408613377147252Performance at iteration 129: 0.19212178654140896Performance at iteration 130: 0.19030997157096863Performance at iteration 131: 0.1888312127855089Performance at iteration 132: 0.18833374977111816Performance at iteration 133: 0.18805385794904497Performance at iteration 134: 0.18766317533122168Performance at iteration 135: 0.1872141698996226Performance at iteration 136: 0.18643372191323174Performance at iteration 137: 0.1852200706799825Performance at iteration 138: 0.18344121740923988Performance at iteration 139: 0.18135053780343796Performance at iteration 140: 0.17827462090386284Performance at iteration 141: 0.1748246947924296Performance at iteration 142: 0.1715441776646508Performance at iteration 143: 0.16740491456455656Performance at iteration 144: 0.16280582613415187Performance at iteration 145: 0.158545712629954Performance at iteration 146: 0.1543927550315857Performance at iteration 147: 0.15094271037313672Performance at iteration 148: 0.1488142450650533Performance at iteration 149: 0.1472978605164422Performance at iteration 150: 0.1462064696682824Performance at iteration 151: 0.14581243925624424Performance at iteration 152: 0.1457046952512529Performance at iteration 153: 0.14555708699756198Performance at iteration 154: 0.1453905721505483Performance at iteration 155: 0.14534659385681153Performance at iteration 156: 0.14532743394374847Performance at iteration 157: 0.14530960553222233Performance at iteration 158: 0.14523065023952061Performance at iteration 159: 0.14517793191803827Performance at iteration 160: 0.14517793191803827Performance at iteration 161: 0.14517793191803827Performance at iteration 162: 0.14515943030516307Performance at iteration 163: 0.1451582236422433Performance at iteration 164: 0.14515763454967076Performance at iteration 165: 0.14515763454967076Performance at iteration 166: 0.14515763454967076Performance at iteration 167: 0.14515462583965724Performance at iteration 168: 0.14515462583965724Performance at iteration 169: 0.14515462583965724Performance at iteration 170: 0.14515462583965724Performance at iteration 171: 0.1451536973317464Performance at iteration 172: 0.1451535271273719Performance at iteration 173: 0.14515046576658885Performance at iteration 174: 0.14515046576658885Performance at iteration 175: 0.14515046576658885Performance at iteration 176: 0.14515046576658885Performance at iteration 177: 0.14515046576658885Performance at iteration 178: 0.14515015416675145Performance at iteration 179: 0.14515015416675145Performance at iteration 180: 0.14515015416675145Performance at iteration 181: 0.14515015416675145Performance at iteration 182: 0.14515015416675145Performance at iteration 183: 0.14514863855308957Performance at iteration 184: 0.14514863855308957Performance at iteration 185: 0.1451473143365648Performance at iteration 186: 0.1451473143365648Performance at iteration 187: 0.14514706863297355Performance at iteration 188: 0.1451469616757499Performance at iteration 189: 0.1451469616757499Performance at iteration 190: 0.1451469616757499Performance at iteration 191: 0.1451469616757499Performance at iteration 192: 0.14514304631286198Performance at iteration 193: 0.14514304631286198Performance at iteration 194: 0.14514304631286198Test set accuracy: 76.667%

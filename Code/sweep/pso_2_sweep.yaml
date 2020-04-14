@@ -1,0 +1,20 @@
+program: PSO-NN.py
+name: pso_2_sweep
+command:
+  - ${env}
+  - python3
+  - ${program}
+  - ${args}
+method: random
+metric:
+  name: val_loss
+  goal: minimize
+parameters:
+  c_1:
+    distribution: uniform
+    min: 0.1
+    max: 4
+  c_2:
+    distribution: uniform
+    min: 0.1
+    max: 4

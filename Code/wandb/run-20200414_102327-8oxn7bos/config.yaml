@@ -1,0 +1,33 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.31
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+c_1:
+  desc: null
+  value: 2.8149246811252295
+c_2:
+  desc: null
+  value: 2.3586122954856257
+epochs:
+  desc: null
+  value: 444
+learning_rate:
+  desc: null
+  value: 0.0019793404320430632
+num_hidden_layers:
+  desc: null
+  value: 2
+num_particles:
+  desc: null
+  value: 91
+num_per_layer:
+  desc: null
+  value: 13
+v_max:
+  desc: null
+  value: 0.08616421166097099

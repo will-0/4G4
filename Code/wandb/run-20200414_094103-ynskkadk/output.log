@@ -1,0 +1,48 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.31
+    code_path: code/Code/PSO-NN.py
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+epochs:
+  desc: null
+  value: 1000
+learning_rate:
+  desc: null
+  value: 0.001
+momentum:
+  desc: null
+  value: 0.95
+num_hidden_layers:
+  desc: null
+  value: 4
+num_per_layer:
+  desc: null
+  value: 90
+
+Using TensorFlow backend.
+get_data
+2020-04-14 10:41:10.291569: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-04-14 10:41:10.324343: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f8ccc2c5040 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-14 10:41:10.324362: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                (None, 10)                50        
+_________________________________________________________________
+dense_1 (Dense)              (None, 10)                110       
+_________________________________________________________________
+dense_2 (Dense)              (None, 3)                 33        
+=================================================================
+Total params: 193
+Trainable params: 193
+Non-trainable params: 0
+_________________________________________________________________
+Here
+(50, 193)
+Performance at iteration 1: 0.6357244292894999Performance at iteration 2: 0.616174320379893Performance at iteration 3: 0.5843735416730245Performance at iteration 4: 0.5558586080869039Performance at iteration 5: 0.5298884471257528Performance at iteration 6: 0.5067591985066732Performance at iteration 7: 0.4862331946690877Performance at iteration 8: 0.4686636865139008Performance at iteration 9: 0.4537380993366241Performance at iteration 10: 0.4407498915990194Test set accuracy: 53.333%

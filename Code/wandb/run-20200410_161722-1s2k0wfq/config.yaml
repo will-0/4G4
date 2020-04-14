@@ -1,0 +1,21 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.31
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+batch_size:
+  desc: null
+  value: 32
+epochs:
+  desc: null
+  value: 1000
+validation_split:
+  desc: null
+  value: 0.2
+verbose:
+  desc: null
+  value: 0

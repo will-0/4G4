@@ -1,0 +1,25 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.31
+    code_path: code/Code/PSO-NN.py
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+epochs:
+  desc: null
+  value: 1000
+learning_rate:
+  desc: null
+  value: 0.001
+momentum:
+  desc: null
+  value: 0.95
+num_hidden_layers:
+  desc: null
+  value: 4
+num_per_layer:
+  desc: null
+  value: 90

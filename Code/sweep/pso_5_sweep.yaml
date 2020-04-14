@@ -1,0 +1,20 @@
+program: PSO-NN.py
+name: pso_5_sweep
+command:
+  - ${env}
+  - python3
+  - ${program}
+  - ${args}
+method: random
+metric:
+  name: val_loss
+  goal: minimize
+parameters:
+  num_per_layer:
+    distribution: int_uniform
+    min: 10
+    max: 40
+  num_particles:
+    distribution: int_uniform
+    min: 10
+    max: 60

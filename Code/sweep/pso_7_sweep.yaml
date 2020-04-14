@@ -1,0 +1,20 @@
+program: PSO-NN.py
+name: pso_7_sweep
+command:
+  - ${env}
+  - python3
+  - ${program}
+  - ${args}
+method: random
+metric:
+  name: val_loss
+  goal: minimize
+parameters:
+  num_hidden_layers:
+    distribution: int_uniform
+    min: 1
+    max: 5
+  num_particles:
+    distribution: int_uniform
+    min: 10
+    max: 60

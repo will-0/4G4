@@ -1,0 +1,21 @@
+{
+    "root": "/Users/Louise/Desktop/4G4 Iris",
+    "program": "<python with no main file>",
+    "startedAt": "2020-04-10T15:56:00.189360",
+    "host": "MacBook-Pro-de-Louise.local",
+    "username": "Louise",
+    "executable": "/Users/Louise/opt/anaconda3/bin/python",
+    "os": "Darwin-19.0.0-x86_64-i386-64bit",
+    "python": "3.7.4",
+    "cpu_count": 4,
+    "args": [
+        "-f",
+        "/Users/Louise/Library/Jupyter/runtime/kernel-f535a994-a940-4024-b3c5-43bcf0e7bfe8.json"
+    ],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "faithful-silence-1",
+    "project": "nn-iris",
+    "heartbeatAt": "2020-04-10T15:56:03.987580"
+}

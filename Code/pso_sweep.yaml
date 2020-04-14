@@ -1,0 +1,43 @@
+program: PSO-NN.py
+command:
+  - ${env}
+  - python3
+  - ${program}
+  - ${args}
+method: bayes
+metric:
+  name: val_loss
+  goal: minimize
+parameters:
+  epochs:
+    distribution: int_uniform
+    min: 100
+    max: 500
+  learning_rate:
+    distribution: uniform
+    min: 0.0005
+    max: 0.002
+  num_per_layer:
+    distribution: int_uniform
+    min: 5
+    max: 20
+  num_hidden_layers:
+    distribution: int_uniform
+    min: 1
+    max: 2
+  c_1:
+    distribution: uniform
+    min: 1
+    max: 3
+  c_2:
+    distribution: uniform
+    min: 1
+    max: 3
+  v_max:
+    distribution: uniform
+    min: 0.05
+    max: 0.2
+  num_particles:
+    distribution: int_uniform
+    min: 25
+    max: 100

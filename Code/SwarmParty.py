@@ -2,6 +2,7 @@ import numpy as np
 import pylab as plt
 import tensorflow as tf
 from tensorflow import keras
+import wandb
 
 class NN_Swarm():
     
@@ -45,9 +46,9 @@ class NN_Swarm():
         self.gbest_perform = self.f(self.g_best)
         self.nn_weights = self._ConvertBack(self.g_best)      
 
-    def train(self, iterations = 30, give_curve = False, train_fast = False, patience = False):
+    def train(self, num_epochs = 30, give_curve = False, train_fast = False, patience = False):
         """ Function to initiate swarm optimization of the weights and biases for the keras
-        model provided. Runs for 50 iterations by default. Set give_curve = True to directly
+        model provided. Runs for 50 num_epochs by default. Set give_curve = True to directly
         return a training curve (a numpy array with performance evaluations on training and 
         test data for each iteration) """
 
@@ -68,10 +69,10 @@ class NN_Swarm():
             training_curve = []
         is_better = np.zeros([self.n_particles,1])
         
-        for i in range(iterations):
+        for epoch in range(num_epochs):
             
             ## PSO Loop
-            m_v_max = self.v_max*np.exp(i/iterations) #*g_best_perform
+            m_v_max = self.v_max*np.exp(epoch/num_epochs) #*g_best_perform
 
             #update the positions using the velocity
             self.v += self.c_1*(np.random.rand(self.current_pos.shape[0],1))*(self.p_best-self.current_pos)
@@ -81,7 +82,7 @@ class NN_Swarm():
             self.current_pos += self.v
             curr_perform = self.f(self.current_pos)
             
-            #replace the p_bests with the current location if they're better
+            #replace the p_bests with the current location if they are better
             is_better = (curr_perform<self.pbest_perform).reshape([is_better.shape[0],1])
             self.p_best = is_better*self.current_pos + np.logical_not(is_better)*self.p_best
             self.pbest_perform = is_better*curr_perform + np.logical_not(is_better)*self.pbest_perform
@@ -95,7 +96,10 @@ class NN_Swarm():
                 count_no_improv += 1
                 if count_no_improv > patience:
                     break
-            print("\rPerformance at iteration " + str(i+1) + ": " + str(self.gbest_perform), end = "\r")
+            print("\rPerformance at iteration " + str(epoch+1) + ": " + str(self.gbest_perform), end = "\r")
+
+            # log wandb parameters
+            wandb.log({'epoch': epoch, 'train_loss': self.gbest_perform.astype(float), 'val_loss':self.f(self.g_best, val_set = True)[0][0].astype(float)})
             
             if not train_fast:
                 training_curve.append([self.gbest_perform.astype(float), self.f(self.g_best, val_set = True)[0][0].astype(float)])

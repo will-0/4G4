@@ -1,0 +1,56 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.31
+    code_path: code/Code/PSO-NN.py
+    framework: tensorflow
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+epochs:
+  desc: null
+  value: 1000
+learning_rate:
+  desc: null
+  value: 0.001
+momentum:
+  desc: null
+  value: 0.95
+num_hidden_layers:
+  desc: null
+  value: 4
+num_per_layer:
+  desc: null
+  value: 90
+
+Using TensorFlow backend.
+get_data
+2020-04-14 10:38:58.046578: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-04-14 10:38:58.085166: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fefced02a70 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-14 10:38:58.085184: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                (None, 10)                50        
+_________________________________________________________________
+dense_1 (Dense)              (None, 10)                110       
+_________________________________________________________________
+dense_2 (Dense)              (None, 3)                 33        
+=================================================================
+Total params: 193
+Trainable params: 193
+Non-trainable params: 0
+_________________________________________________________________
+Here
+(50, 193)
+Traceback (most recent call last):
+  File "PSO-NN.py", line 110, in <module>
+    train_swarm()
+  File "PSO-NN.py", line 101, in train_swarm
+    my_swarm.train(num_epochs=10)
+  File "/Users/kim-barker/OneDrive - University of Cambridge/Part IIB/4G4 Coursework/4G4/Code/SwarmParty.py", line 99, in train
+    print("\rPerformance at iteration " + str(i+1) + ": " + str(self.gbest_perform), end = "\r")
+NameError: name 'i' is not defined
