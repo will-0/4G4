@@ -86,7 +86,9 @@ def train_swarm():
 	my_swarm.provide_model(model)
 	my_swarm.provide_data(X_train, X_test, Y_train, Y_test)
 	my_swarm.train(num_epochs=config.epochs)
-	print("Test set accuracy: {:.3%}".format(my_swarm.get_accuracy()))
+
+	print(type( my_swarm.get_accuracy()))
+	print("Test set accuracy: {:.3%}".format(str(my_swarm.get_accuracy())))
 
 if __name__ == "__main__":
 
