@@ -10,7 +10,6 @@ hyperparameter_defaults = dict(
  	num_particles = 50,
  	c_1 = 2,
  	c_2 = 2,
- 	omega = 0.9,
  	v_max = 0.1
     )
 wandb.init(config=hyperparameter_defaults, project="4g4-kim-test")
@@ -82,7 +81,7 @@ def build_model():
 
 def train_swarm():
 	wandb.init(project="4g4-kim-test-1")
-	my_swarm = NN_Swarm(n_particles = config.num_particles, x_max = 1, v_max = config.v_max, c_1 = config.c_1, c_2 = config.c_2, omega = config.omega)
+	my_swarm = NN_Swarm(n_particles = config.num_particles, x_max = 1, v_max = config.v_max, c_1 = config.c_1, c_2 = config.c_2)
 	my_swarm.provide_model(model)
 	my_swarm.provide_data(X_train, X_test, Y_train, Y_test)
 	my_swarm.train(num_epochs=config.epochs)

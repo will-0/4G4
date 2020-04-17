@@ -1,0 +1,58 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.31
+    code_path: code/Code/PSO-NN.py
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+c_1:
+  desc: null
+  value: 2
+c_2:
+  desc: null
+  value: 2
+epochs:
+  desc: null
+  value: 100
+learning_rate:
+  desc: null
+  value: 0.001
+num_hidden_layers:
+  desc: null
+  value: 1
+num_particles:
+  desc: null
+  value: 50
+num_per_layer:
+  desc: null
+  value: 10
+omega:
+  desc: null
+  value: 0.9
+v_max:
+  desc: null
+  value: 0.1
+
+Using TensorFlow backend.
+2020-04-17 22:22:29.538847: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-04-17 22:22:29.601921: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fb91ea54340 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-17 22:22:29.601949: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                (None, 10)                50        
+_________________________________________________________________
+dense_1 (Dense)              (None, 10)                110       
+_________________________________________________________________
+dense_2 (Dense)              (None, 3)                 33        
+=================================================================
+Total params: 193
+Trainable params: 193
+Non-trainable params: 0
+_________________________________________________________________
+(50, 193)
+Performance at iteration 1: [[0.59647684]]Performance at iteration 2: [[0.59647684]]Performance at iteration 3: 0.5802230993906657Performance at iteration 4: 0.5577966001298692Performance at iteration 5: 0.539389869901869Performance at iteration 6: 0.5240410380893283Performance at iteration 7: 0.5114830447567834Performance at iteration 8: 0.5011287709077199Performance at iteration 9: 0.492427443795734Performance at iteration 10: 0.4850972314675649Performance at iteration 11: 0.4789184987545013Performance at iteration 12: 0.4736385484536489Performance at iteration 13: 0.46913669639163547Performance at iteration 14: 0.46530893246332805Performance at iteration 15: 0.4619940009382036Performance at iteration 16: 0.4592068864239587Performance at iteration 17: 0.4567879339059194Performance at iteration 18: 0.45460514293776616Performance at iteration 19: 0.452706958187951Performance at iteration 20: 0.451045823097229Performance at iteration 21: 0.44959508313073054Performance at iteration 22: 0.44834617641237046Performance at iteration 23: 0.447251107957628Performance at iteration 24: 0.4462961501545376Performance at iteration 25: 0.445453233189053Performance at iteration 26: 0.4447071717845069Performance at iteration 27: 0.44404705233044095Performance at iteration 28: 0.44346401558982Performance at iteration 29: 0.442949065234926Performance at iteration 30: 0.4313599348068237Performance at iteration 31: 0.41217761370870803Performance at iteration 32: 0.38824047247568766Performance at iteration 33: 0.36902657283676993Performance at iteration 34: 0.35247620476616753Performance at iteration 35: 0.33489659958415563Performance at iteration 36: 0.3210104068120321Performance at iteration 37: 0.30989447633425393Performance at iteration 38: 0.30093955331378514Performance at iteration 39: 0.2926580389340719Performance at iteration 40: 0.27643432286050584Performance at iteration 41: 0.2636644982629352Performance at iteration 42: 0.2535307394133674Performance at iteration 43: 0.24544324411286247Performance at iteration 44: 0.23892004920376672Performance at iteration 45: 0.23362639745076497Performance at iteration 46: 0.22930260863569046Performance at iteration 47: 0.21954574121369255Performance at iteration 48: 0.2090076724688212Performance at iteration 49: 0.20010767645306057Performance at iteration 50: 0.19306633704238468Performance at iteration 51: 0.18776510490311515Performance at iteration 52: 0.1841584003633923Performance at iteration 53: 0.18182145059108734Performance at iteration 54: 0.18016081319914923Performance at iteration 55: 0.1791016350189845Performance at iteration 56: 0.1783961209985945Performance at iteration 57: 0.17686655984984503Performance at iteration 58: 0.17485190828641256Performance at iteration 59: 0.1734745677974489Performance at iteration 60: 0.17295669052335952Performance at iteration 61: 0.17295669052335952Performance at iteration 62: 0.17295669052335952Performance at iteration 63: 0.17295669052335952Performance at iteration 64: 0.17295669052335952Performance at iteration 65: 0.17295669052335952Performance at iteration 66: 0.17295669052335952Performance at iteration 67: 0.17295669052335952Performance at iteration 68: 0.17295669052335952Performance at iteration 69: 0.1728913144932853Performance at iteration 70: 0.17072856724262236Performance at iteration 71: 0.16861183378431532Performance at iteration 72: 0.16464478141731687Performance at iteration 73: 0.16222359935442607Performance at iteration 74: 0.15918019976880815Performance at iteration 75: 0.1544222136338552Performance at iteration 76: 0.15118344558609856Performance at iteration 77: 0.1478658980793423Performance at iteration 78: 0.1451065480709076Performance at iteration 79: 0.14175164567099677Performance at iteration 80: 0.13871737288104163Performance at iteration 81: 0.13589305447207556Performance at iteration 82: 0.1328018244769838Performance at iteration 83: 0.13003183950980504Performance at iteration 84: 0.12590071045690113Performance at iteration 85: 0.1229156353407436Performance at iteration 86: 0.12135972960127725Performance at iteration 87: 0.12135972960127725Performance at iteration 88: 0.12115385780731837Performance at iteration 89: 0.12072619116968579Performance at iteration 90: 0.12060442235734728Performance at iteration 91: 0.12060442235734728Performance at iteration 92: 0.12039748612377378Performance at iteration 93: 0.11973338226477305Performance at iteration 94: 0.11929825958278444Performance at iteration 95: 0.11845451659626431Performance at iteration 96: 0.11759924855497149Performance at iteration 97: 0.11702043794923359Performance at iteration 98: 0.11554462826914258Performance at iteration 99: 0.1145602458053165Performance at iteration 100: 0.11433043993181652Test set accuracy: tf.Tensor(0.93333334, shape=(), dtype=float32)

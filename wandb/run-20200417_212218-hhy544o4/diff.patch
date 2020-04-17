@@ -1,0 +1,50 @@
+diff --git a/Code/PSO-NN.py b/Code/PSO-NN.py
+index b24f49b..a7a071f 100644
+--- a/Code/PSO-NN.py
++++ b/Code/PSO-NN.py
+@@ -10,6 +10,7 @@ hyperparameter_defaults = dict(
+  	num_particles = 50,
+  	c_1 = 2,
+  	c_2 = 2,
++ 	omega = 0.9,
+  	v_max = 0.1
+     )
+ wandb.init(config=hyperparameter_defaults, project="4g4-kim-test")
+@@ -81,7 +82,7 @@ def build_model():
+ 
+ def train_swarm():
+ 	wandb.init(project="4g4-kim-test-1")
+-	my_swarm = NN_Swarm(n_particles = config.num_particles, x_max = 1, v_max = config.v_max, c_1 = config.c_1, c_2 = config.c_2)
++	my_swarm = NN_Swarm(n_particles = config.num_particles, x_max = 1, v_max = config.v_max, c_1 = config.c_1, c_2 = config.c_2, omega = config.omega)
+ 	my_swarm.provide_model(model)
+ 	my_swarm.provide_data(X_train, X_test, Y_train, Y_test)
+ 	my_swarm.train(num_epochs=config.epochs)
+diff --git a/Code/SwarmParty.py b/Code/SwarmParty.py
+index dfe31f7..c92f706 100644
+--- a/Code/SwarmParty.py
++++ b/Code/SwarmParty.py
+@@ -6,7 +6,7 @@ import wandb
+ 
+ class NN_Swarm():
+     
+-    def __init__(self, n_particles = 30, x_max = 1, v_max = 0.1, c_1 = 2, c_2 = 2):
++    def __init__(self, n_particles = 30, x_max = 1, v_max = 0.1, c_1 = 2, c_2 = 2, omega = 1):
+         self.n_particles = n_particles
+         self.x_min = -1*x_max
+         self.x_max = x_max
+@@ -14,6 +14,7 @@ class NN_Swarm():
+         self.v_max = v_max
+         self.c_1 = c_1
+         self.c_2 = c_2
++        self.omega = omega
+ 
+     def provide_model(self, model):
+         self.model = model
+@@ -75,6 +76,7 @@ class NN_Swarm():
+             m_v_max = self.v_max*np.exp(epoch/num_epochs) #*g_best_perform
+ 
+             #update the positions using the velocity
++            self.v *= self.omega
+             self.v += self.c_1*(np.random.rand(self.current_pos.shape[0],1))*(self.p_best-self.current_pos)
+             self.v += self.c_2*(np.random.rand(self.current_pos.shape[0],1))*(self.g_best-self.current_pos)
+             v_norm = np.linalg.norm(self.v,axis=1).reshape([self.v.shape[0],1])             #code for velocity limitation
