@@ -64,3 +64,4 @@ def animate(i):
 anim = animation.FuncAnimation(fig, animate, init_func=init,
                                frames=100, interval=100, blit=True)
 HTML(anim.to_html5_video())
+plt.show()
