@@ -227,3 +227,74 @@ class NN_Swarm():
         for i in self.ls_form:
             reinput.append(position[i[0]:i[1]].reshape(i[2]))
         return reinput
+
+
+class Swarm():
+    
+    def __init__(self, n_dims, function, n_particles = 30, start_range = [-1, 1], v_max = 0.1, c_1 = 2, c_2 = 2, omega = 1):
+        #setup all the parameters of the swarm
+
+        #positional (essential) arguments
+        self.n_particles = n_particles
+        self.n_dims = n_dims
+        self.function = function
+
+        #keyword (optional) arguments
+        self.x_min = start_range[0]
+        self.x_max = start_range[1]
+        self.v_min = -1*v_max
+        self.v_max = v_max
+        self.c_1 = c_1
+        self.c_2 = c_2
+        self.omega = omega
+
+        #set the initial positions
+        self.current_pos = self.x_min + (self.x_max-self.x_min)*np.random.rand(self.n_particles, self.n_dims) #initialise the particles
+        self.p_best = self.current_pos
+        self.v = self.v_min + (self.v_max-self.v_min)*np.random.rand(self.n_particles, self.n_dims)
+
+        self.g_best = self.p_best[np.argmin(self.f(self.current_pos)),:]
+        self.pbest_perform = self.f(self.p_best)
+        self.gbest_perform = self.f(self.g_best)
+        
+        #Evaluate the current positions
+        self.g_best = self.p_best[np.argmin(self.f(self.current_pos)),:]
+        self.pbest_perform = self.f(self.p_best)
+        self.gbest_perform = self.f(self.g_best)
+
+        #(ignore this vaiable: it's just a method to compare current pos to pbest/gbest etc.)
+        self.is_better = np.zeros([self.n_particles,1])
+    
+    def f(self, positions):
+        return self.function(positions)
+
+    def update_particles(self):
+        """ Function to update particle positions using the PSO algorithm"""
+
+        #exponential velocity decay
+        # m_v_max = self.v_max#*np.exp(epoch/num_epochs)
+
+        #update the current velocity
+        self.v *= self.omega
+        self.v += self.c_1*(np.random.rand(self.current_pos.shape[0],1))*(self.p_best-self.current_pos)
+        self.v += self.c_2*(np.random.rand(self.current_pos.shape[0],1))*(self.g_best-self.current_pos)
+        # v_norm = np.linalg.norm(self.v,axis=1).reshape([self.v.shape[0],1])             #code for velocity limitation
+        # self.v = np.where(v_norm < m_v_max, self.v, m_v_max*self.v/v_norm)                       #(comment in to use it)
+
+        #update the current position
+        self.current_pos += self.v
+
+        #evaluate all of the particle's positions
+        curr_perform = self.f(self.current_pos)
+        
+        #replace the p_bests with the current location if they are better
+        self.is_better = (curr_perform<self.pbest_perform).reshape([self.is_better.shape[0],1])
+        self.p_best = self.is_better*self.current_pos + np.logical_not(self.is_better)*self.p_best
+        self.pbest_perform = self.is_better*curr_perform + np.logical_not(self.is_better)*self.pbest_perform
+        
+        #update g_best
+        if np.min(self.pbest_perform) < self.gbest_perform:
+            self.g_best = self.p_best[np.argmin(self.pbest_perform),:]
+            self.gbest_perform = np.min(self.pbest_perform)
+
+        return self.current_pos
