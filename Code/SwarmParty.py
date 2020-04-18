@@ -6,7 +6,7 @@ import wandb
 
 class NN_Swarm():
     
-    def __init__(self, n_particles = 30, x_max = 1, v_max = 0.1, c_1 = 2, c_2 = 2, omega = 1):
+    def __init__(self, n_particles = 30, x_max = 1, v_max = 0.25, c_1 = 2, c_2 = 2, omega = 1):
         self.n_particles = n_particles
         self.x_min = -1*x_max
         self.x_max = x_max

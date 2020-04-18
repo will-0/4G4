@@ -1,0 +1,24 @@
+{
+    "root": "/Users/kim-barker/OneDrive - University of Cambridge/Part IIB/4G4 Coursework/4G4",
+    "program": "Code/PSO-NN.py",
+    "git": {
+        "remote": "https://github.com/will-0/4G4.git",
+        "commit": "8b21d79ce4e681662f4e9015da5ee52315aa13f4"
+    },
+    "email": "kim_barker@outlook.com",
+    "codePath": "Code/PSO-NN.py",
+    "startedAt": "2020-04-18T19:49:20.505702",
+    "host": "Kims-MacBook-Pro.local",
+    "username": "kim-barker",
+    "executable": "/usr/local/opt/python/bin/python3.7",
+    "os": "Darwin-19.3.0-x86_64-i386-64bit",
+    "python": "3.7.4",
+    "cpu_count": 8,
+    "args": [],
+    "state": "failed",
+    "jobType": null,
+    "mode": "run",
+    "project": "4g4-kim-test",
+    "heartbeatAt": "2020-04-18T19:49:32.973478",
+    "exitcode": 1
+}

@@ -77,7 +77,7 @@ def build_model():
 
 def train_swarm():
 	wandb.init(project="4g4-kim-test-1")
-	my_swarm = NN_Swarm(n_particles = config.num_particles, x_max = 1, c_1 = config.c_1, c_2 = config.c_2, omega = config.omega)
+	my_swarm = NN_Swarm(n_particles = config.num_particles, x_max = 1, v_max = config.v_max, c_1 = config.c_1, c_2 = config.c_2, omega = config.omega)
 	my_swarm.provide_model(model)
 	my_swarm.provide_data(X_train, X_test, Y_train, Y_test)
 	my_swarm.train(num_epochs=config.epochs)

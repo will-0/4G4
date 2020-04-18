@@ -1,0 +1,60 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.31
+    code_path: code/Code/PSO-NN.py
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+c_1:
+  desc: null
+  value: 2
+c_2:
+  desc: null
+  value: 2
+epochs:
+  desc: null
+  value: 250
+num_hidden_layers:
+  desc: null
+  value: 1
+num_particles:
+  desc: null
+  value: 50
+num_per_layer:
+  desc: null
+  value: 10
+omega:
+  desc: null
+  value: 0.9
+
+Using TensorFlow backend.
+2020-04-18 20:49:31.444238: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-04-18 20:49:31.505913: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f873b49a8e0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-18 20:49:31.505936: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                (None, 10)                50        
+_________________________________________________________________
+dense_1 (Dense)              (None, 10)                110       
+_________________________________________________________________
+dense_2 (Dense)              (None, 3)                 33        
+=================================================================
+Total params: 193
+Trainable params: 193
+Non-trainable params: 0
+_________________________________________________________________
+Traceback (most recent call last):
+  File "Code/PSO-NN.py", line 92, in <module>
+    train_swarm()
+  File "Code/PSO-NN.py", line 80, in train_swarm
+    my_swarm = NN_Swarm(n_particles = config.num_particles, x_max = 1, v_max = config.v_max, c_1 = config.c_1, c_2 = config.c_2, omega = config.omega)
+  File "/usr/local/lib/python3.7/site-packages/wandb/wandb_config.py", line 224, in __getattr__
+    return self.__getitem__(key)
+  File "/usr/local/lib/python3.7/site-packages/wandb/wandb_config.py", line 214, in __getitem__
+    return self._items[key]
+KeyError: 'v_max'
