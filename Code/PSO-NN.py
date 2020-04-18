@@ -69,7 +69,10 @@ def build_model():
 		model.add(layers.Dense(config.num_per_layer, activation='relu'))
 	model.add(layers.Dense(3))
 
-	model.compile(loss='mse')
+	optimizer = tf.keras.optimizers.RMSprop()
+
+	model.compile(loss='mse',
+	        optimizer=optimizer)
 	return model
 
 def train_swarm():

@@ -73,14 +73,14 @@ class NN_Swarm():
         for epoch in range(num_epochs):
             
             ## PSO Loop
-            m_v_max = self.v_max*np.exp(epoch/num_epochs) #*g_best_perform
+            # m_v_max = self.v_max*np.exp(epoch/num_epochs) #*g_best_perform
 
             #update the positions using the velocity
             self.v *= self.omega
             self.v += self.c_1*(np.random.rand(self.current_pos.shape[0],1))*(self.p_best-self.current_pos)
             self.v += self.c_2*(np.random.rand(self.current_pos.shape[0],1))*(self.g_best-self.current_pos)
             v_norm = np.linalg.norm(self.v,axis=1).reshape([self.v.shape[0],1])             #code for velocity limitation
-            self.v = np.where(v_norm < m_v_max, self.v, m_v_max*self.v/v_norm)                       #(comment in to use it)
+            # self.v = np.where(v_norm < m_v_max, self.v, m_v_max*self.v/v_norm)                       #(comment in to use it)
             self.current_pos += self.v
             curr_perform = self.f(self.current_pos)
             
