@@ -1,4 +1,5 @@
 program: PSO-NN.py
+name: pso_10_sweep
 command:
   - ${env}
   - python3
