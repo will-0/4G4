@@ -5,13 +5,11 @@ import wandb
 hyperparameter_defaults = dict(
     num_per_layer = 10,
     num_hidden_layers = 1,
-    learning_rate = 0.001,
-    epochs = 100,
+    epochs = 250,
  	num_particles = 50,
  	c_1 = 2,
  	c_2 = 2,
- 	omega = 0.9,
- 	v_max = 0.1
+ 	omega = 0.9
     )
 wandb.init(config=hyperparameter_defaults, project="4g4-kim-test")
 config = wandb.config
@@ -54,7 +52,6 @@ from SwarmParty import NN_Swarm
 np.random.seed(1)
 tf.compat.v1.set_random_seed(1)
 
-
 def get_data():
 	iris = load_iris()
 	X = iris['data']; y = iris['target']
@@ -64,7 +61,6 @@ def get_data():
 
 	return X_train, X_test, Y_train, Y_test
 
-
 def build_model():
 
 	model = keras.Sequential()
@@ -73,12 +69,8 @@ def build_model():
 		model.add(layers.Dense(config.num_per_layer, activation='relu'))
 	model.add(layers.Dense(3))
 
-	optimizer = tf.keras.optimizers.RMSprop(config.learning_rate)
-
-	model.compile(loss='mse',
-	        optimizer=optimizer)
+	model.compile(loss='mse')
 	return model
-
 
 def train_swarm():
 	wandb.init(project="4g4-kim-test-1")
