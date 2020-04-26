@@ -99,6 +99,8 @@ def investigate(a, b, objfunc, niter = 500, deterministic = False, clip = None):
     
     plt.plot(trajectories);
     plt.plot(objfunc.minimum[0]*(trajectories < 1000000), 'k');
+    plt.xlabel('Number of iterations')
+    plt.ylabel('Position')
 
 class InvestigationObject():
     def __init__(self):
