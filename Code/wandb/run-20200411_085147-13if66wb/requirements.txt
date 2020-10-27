@@ -39,7 +39,7 @@ conda-verify==3.4.2
 conda==4.8.2
 configparser==5.0.0
 contextlib2==0.6.0
-cryptography==2.7
+cryptography==3.2
 cycler==0.10.0
 cython==0.29.13
 cytoolz==0.10.0
