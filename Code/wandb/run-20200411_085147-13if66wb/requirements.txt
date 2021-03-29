@@ -167,7 +167,7 @@ pycrypto==2.6.1
 pycurl==7.43.0.3
 pydot==1.4.1
 pyflakes==2.1.1
-pygments==2.4.2
+pygments==2.7.4
 pylint==2.4.2
 pyodbc==4.0.27
 pyopenssl==19.0.0
